@@ -1,8 +1,38 @@
-node_modules/
-build/
-dist/
-coverage/
-.DS_Store
+# Logs
+logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Diagnostic reports
+node_report.csv
+v8_profile*.json
+v8_profile*.json.gz
+
+# Node_modules
+node_modules/
+
+# Mac OS
+.DS_Store
+
+# Build Output
+dist/
+dist-ssr/
+build/
+coverage/
+
+# Local env files
 .env*
 !.env.example
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
