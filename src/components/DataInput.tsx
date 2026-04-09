@@ -18,7 +18,7 @@ export default function DataInput({ names, setNames }: DataInputProps) {
       .map((n) => n.trim())
       .filter((n) => n.length > 0);
     
-    setNames(parsedNames);
+    setNames([...names, ...parsedNames]); // ✅ 累加到現有名單
     setPasteText(''); // ✅ 匯入後清空文字框
   };
 
@@ -45,7 +45,7 @@ export default function DataInput({ names, setNames }: DataInputProps) {
              }
           }
         });
-        setNames(parsedNames);
+        setNames([...names, ...parsedNames]); // ✅ 累加到現有名單
         if (fileInputRef.current) {
           fileInputRef.current.value = '';
         }
