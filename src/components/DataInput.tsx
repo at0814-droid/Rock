@@ -19,6 +19,7 @@ export default function DataInput({ names, setNames }: DataInputProps) {
       .filter((n) => n.length > 0);
     
     setNames(parsedNames);
+    setPasteText(''); // ✅ 匯入後清空文字框
   };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
